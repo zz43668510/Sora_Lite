@@ -1,0 +1,6 @@
+## Interface: 50100
+## Title: |cff70C0F5Sora's|r Script
+## Notes: Sora's O(∩_∩)O
+## Author: Neavo
+
+LoadScript.xml

@@ -1,0 +1,12 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/">
+
+	<Script file = "Align.lua"/>
+	<Script file = "AutoRepair.lua"/>
+	<Script file = "AutoSell.lua"/>
+	<Script file = "ClearFont_zhCN.lua"/>
+	<Script file = "ClearFont_zhTW.lua"/>
+	<Script file = "DragEmAll.lua"/>
+	<Script file = "tekKompare.lua"/>
+	<Script file = "ReloadUI.lua"/>
+
+</Ui>
