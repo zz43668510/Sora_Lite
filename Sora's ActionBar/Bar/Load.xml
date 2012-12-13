@@ -1,0 +1,14 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/">
+
+	<Script file = "MainMenuBar.lua"/>
+	<Script file = "MultiBarBottomLeft.lua"/>
+	<Script file = "MultiBarBottomRight.lua"/>
+	<Script file = "MultiBarLeft.lua"/>
+	<Script file = "MultiBarRight.lua"/>
+	<Script file = "ExtraActionBar.lua"/>
+	<Script file = "OverrideActionBar.lua"/>
+	<Script file = "PetActionBar.lua"/>
+	<Script file = "StanceBar.lua"/>
+	<Script file = "PossessBar.lua"/>
+
+</Ui>

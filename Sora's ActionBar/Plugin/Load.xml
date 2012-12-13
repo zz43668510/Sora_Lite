@@ -1,0 +1,9 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/">
+
+	<Script file = "HideBlz.lua"/>
+	<Script file = "ShowGrid.lua"/>
+	<Script file = "ButtonStyle.lua"/>
+	<Script file = "tullaRange.lua"/>
+	<Script file = "ncHoverBind.lua"/>
+
+</Ui>

@@ -1,11 +1,13 @@
-
+-- Engine
+local Addon = Sora:GetAddon("ActionBar") and Sora:GetAddon("ActionBar") or Sora:CreateAddon("ActionBar");
+local Module = Addon:CreateModule("HideBlz");
 local BlzHider = CreateFrame("Frame");
 
-local function SetBlzHider()
+function Module:SetBlzHider()
 	BlzHider:Hide();
 end
 
-local function SetBlzFrameParent()
+function Module:SetBlzFrameParent()
 	MainMenuBar:SetParent(BlzHider)
 	MainMenuBarPageNumber:SetParent(BlzHider);
 	ActionBarDownButton:SetParent(BlzHider);
@@ -33,7 +35,7 @@ local function SetBlzFrameParent()
 	CharacterBag3Slot:SetParent(BlzHider);
 end
 
-local function HideTexture()
+function Module:HideTexture()
 	StanceBarLeft:SetTexture(nil);
 	StanceBarMiddle:SetTexture(nil);
 	StanceBarRight:SetTexture(nil);
@@ -63,6 +65,8 @@ local function HideTexture()
 	OverrideActionBar["_ButtonBGMid"]:SetAlpha(0);
 end
 
-SetBlzHider();
-SetBlzFrameParent();
-HideTexture();
+function Module:OnEnable()
+	Module:SetBlzHider();
+	Module:SetBlzFrameParent();
+	Module:HideTexture();
+end
