@@ -1,7 +1,8 @@
--- 防止重复加载
+-- Engine
 if not Sora then Sora = {} end
 if Sora.Addon then return end
 
+-- Begin！
 Sora.Addon = {};
 Sora.AddonQueue = {};
 
@@ -11,9 +12,15 @@ function Sora:CreateAddon(name)
 	Sora.Addon[name].ModuleQueue = {};
 	
 	Sora.Addon[name].CreateModule = function(self, n)
-		Sora.Addon[name].Module[n] = {};
+		Sora.Addon[name].Module[n] = CreateFrame("Frame");
 		Sora.Addon[name].Module[n].OnLoad = function() end;
 		Sora.Addon[name].Module[n].OnEnable = function() end;
+		Sora.Addon[name].Module[n]:RegisterAllEvents();
+		Sora.Addon[name].Module[n]:SetScript("OnEvent", function(self, event, ...)
+			if self[event] then
+				return self[event](self, event, ...)
+			end
+		end)
 		
 		tinsert(Sora.Addon[name].ModuleQueue, n);	
 		

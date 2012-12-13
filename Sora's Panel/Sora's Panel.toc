@@ -1,0 +1,7 @@
+## Interface: 50100
+## Title: |cff70C0F5Sora's|r Panel
+## Notes: Sora's O(∩_∩)O
+## Author: Neavo
+## Dependencies: Sora's
+
+Load.xml

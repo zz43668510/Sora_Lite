@@ -1,13 +1,12 @@
 -- Engine
 local Addon = Sora:GetAddon("ActionBar") and Sora:GetAddon("ActionBar") or Sora:CreateAddon("ActionBar");
 local Module = Addon:CreateModule("ButtonStyle");
-local F, C, M, D  = nil, nil, nil, nil;
+local F, M, C = nil, nil, nil;
 
 function Module:GetEngine()
-	F = Addon:GetModule("Function").Function;
+	F = Sora.Function;
+	M = Sora.Media;
 	C = Addon:GetModule("Config").Config;
-	M = Addon:GetModule("Media").Media;
-	D = Addon:GetModule("DataBase").DataBase;
 end
 
 function Module:CreateHighlightTexture(Button)
@@ -35,13 +34,13 @@ function Module:CreateCheckedTexture(Button)
 end
 
 function Module:CreateBG(Button)
-	if not Button or (Button and Button.BG) then return end
+	if not Button or (Button and Button.Shadow) then return end
 	
 	if Button:GetFrameLevel() < 1 then
 		Button:SetFrameLevel(1);
 	end
 	
-	Button.BG = F.CreateShadow(M.GlowTex, Button, 3);
+	Button.Shadow = F.CreateShadow(Button, 3);
 end
 
 function Module:StyleActionButton(Button)

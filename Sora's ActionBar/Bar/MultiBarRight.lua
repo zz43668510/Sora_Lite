@@ -1,13 +1,12 @@
 -- Engine
 local Addon = Sora:GetAddon("ActionBar") and Sora:GetAddon("ActionBar") or Sora:CreateAddon("ActionBar");
 local Module = Addon:CreateModule("MultiBarRight");
-local F, C, M, D  = nil, nil, nil, nil;
+local F, M, C = nil, nil, nil;
 
 function Module:GetEngine()
-	F = Addon:GetModule("Function").Function;
+	F = Sora.Function;
+	M = Sora.Media;
 	C = Addon:GetModule("Config").Config;
-	M = Addon:GetModule("Media").Media;
-	D = Addon:GetModule("DataBase").DataBase;
 end
 
 function Module:CreateActionBar()

@@ -1,13 +1,12 @@
 -- Engine
 local Addon = Sora:GetAddon("ActionBar") and Sora:GetAddon("ActionBar") or Sora:CreateAddon("ActionBar");
 local Module = Addon:CreateModule("PossessBar");
-local F, C, M, D  = nil, nil, nil, nil;
+local F, M, C = nil, nil, nil;
 
 function Module:GetEngine()
-	F = Addon:GetModule("Function").Function;
+	F = Sora.Function;
+	M = Sora.Media;
 	C = Addon:GetModule("Config").Config;
-	M = Addon:GetModule("Media").Media;
-	D = Addon:GetModule("DataBase").DataBase;
 end
 
 function Module:CreateActionBar()
@@ -28,7 +27,7 @@ function Module:SetActionBarParent()
 end
 
 function Module:SetActionBarButton()
-	for i = 1, 10 do
+	for i = 1, 2 do
 		local Button = _G["PossessButton" .. i];
 		local PreButton = _G["PossessButton" .. i - 1];
 		Button:SetSize(C.ButtonSize, C.ButtonSize);

@@ -2,11 +2,8 @@
 
 	<!-- Config -->
 	<Include file = "Config\Load.xml" />
+
 	
-	<!-- Bar -->
-	<Include file = "Bar\Load.xml" />
-	
-	<!-- Plugin -->
-	<Include file = "Plugin\Load.xml"/>
-	
+	<Script file = "BottomPanel.lua" />
+
 </Ui>

@@ -1,0 +1,12 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/">
+
+	<!-- Addon -->
+	<Include file = "Addon\Load.xml" />
+
+	<!-- Media -->
+	<Include file = "Media\Load.xml" />
+
+	<!-- Function -->
+	<Include file = "Function\Load.xml" />
+	
+</Ui>
