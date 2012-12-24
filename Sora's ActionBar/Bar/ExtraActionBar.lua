@@ -1,6 +1,6 @@
 -- Engine
-local Addon = Sora:GetAddon("ActionBar") and Sora:GetAddon("ActionBar") or Sora:CreateAddon("ActionBar");
-local Module = Addon:CreateModule("ExtraActionBar");
+local Addon = LibStub("AceAddon-3.0"):GetAddon("ActionBar");
+local Module = Addon:NewModule("ExtraActionBar");
 local F, M, C = nil, nil, nil;
 
 function Module:GetEngine()
@@ -37,7 +37,7 @@ function Module:DoRegisterStateDriver()
 	RegisterStateDriver(Module.ActionBar, "visibility", "[petbattle][overridebar][vehicleui] hide; show");
 end
 
-function Module:OnLoad()
+function Module:OnInitialize()
 	Module:GetEngine();
 end
 

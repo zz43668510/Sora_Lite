@@ -1,6 +1,6 @@
 -- Engine
-local Addon = Sora:GetAddon("ActionBar") and Sora:GetAddon("ActionBar") or Sora:CreateAddon("ActionBar");
-local Module = Addon:CreateModule("ShowGrid");
+local Addon = LibStub("AceAddon-3.0"):GetAddon("ActionBar");
+local Module = Addon:NewModule("ShowGrid");
 
 function Module:ShowGrid()
 	SetActionBarToggles(1, 1, 1, 1, 0)
@@ -29,6 +29,6 @@ function Module:ShowGrid()
 	end
 end
 
-function Module:OnLoad()
+function Module:OnInitialize()
 	Module:ShowGrid();
 end

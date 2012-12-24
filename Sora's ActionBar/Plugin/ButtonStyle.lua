@@ -1,6 +1,6 @@
 -- Engine
-local Addon = Sora:GetAddon("ActionBar") and Sora:GetAddon("ActionBar") or Sora:CreateAddon("ActionBar");
-local Module = Addon:CreateModule("ButtonStyle");
+local Addon = LibStub("AceAddon-3.0"):GetAddon("ActionBar");
+local Module = Addon:NewModule("ButtonStyle");
 local F, M, C = nil, nil, nil;
 
 function Module:GetEngine()
@@ -196,14 +196,13 @@ function Module:StyleFlyoutBar(Button)
     SpellFlyoutHorizontalBackground:SetTexture(nil);
     SpellFlyoutVerticalBackground:SetTexture(nil);
     SpellFlyout:HookScript("OnShow", function(self)
-		local NUM_FLYOUT_BUTTONS = NUM_FLYOUT_BUTTONS;
-		for i = 1, NUM_FLYOUT_BUTTONS do
+		for i = 1, 10 do
 			Module:StyleActionButton(_G["SpellFlyoutButton"..i]);
 		end
 	end)
 end
 
-function Module:OnLoad()
+function Module:OnInitialize()
 	Module:GetEngine();
 	Module:StyleActionBar();
 	Module:StyleStanceBar();

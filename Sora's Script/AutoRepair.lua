@@ -4,8 +4,8 @@ Event:RegisterEvent("MERCHANT_SHOW")
 Event:SetScript("OnEvent", function(self)
 	if CanMerchantRepair() then
 		local cost, possible = GetRepairAllCost()
-		if cost>0 then
-			local c = cost%100
+		if cost > 0 then
+			local c = cost % 100
 			local s = math.floor((cost%10000)/100)
 			local g = math.floor(cost/10000)
 			if IsInGuild() then

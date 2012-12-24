@@ -1,7 +1,7 @@
 ﻿<Ui xmlns="http://www.blizzard.com/wow/ui/">
 
-	<!-- Addon -->
-	<Include file = "Addon\Load.xml" />
+	<!-- Ace3 -->
+	<Include file = "Ace3\Load.xml" />
 
 	<!-- Media -->
 	<Include file = "Media\Load.xml" />

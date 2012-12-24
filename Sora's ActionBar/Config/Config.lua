@@ -1,6 +1,6 @@
 -- Engine
-local Addon = Sora:GetAddon("ActionBar") and Sora:GetAddon("ActionBar") or Sora:CreateAddon("ActionBar");
-local Module = Addon:CreateModule("Config");
+local Addon = LibStub("AceAddon-3.0"):GetAddon("ActionBar");
+local Module = Addon:NewModule("Config");
 
 -- Begin！
 Module.Config = {};

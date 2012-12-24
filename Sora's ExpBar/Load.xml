@@ -1,9 +1,12 @@
 ﻿<Ui xmlns="http://www.blizzard.com/wow/ui/">
 
+	<!-- Sora-Init -->
+	<Script file = "Sora-Init.lua" />
+
 	<!-- Config -->
 	<Include file = "Config\Load.xml" />
 
-	
-	<Script file = "BottomPanel.lua" />
+	<!-- ExpBar -->
+	<Include file = "ExpBar\Load.xml" />
 
 </Ui>

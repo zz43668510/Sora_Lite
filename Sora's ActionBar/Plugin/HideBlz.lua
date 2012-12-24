@@ -1,6 +1,6 @@
 -- Engine
-local Addon = Sora:GetAddon("ActionBar") and Sora:GetAddon("ActionBar") or Sora:CreateAddon("ActionBar");
-local Module = Addon:CreateModule("HideBlz");
+local Addon = LibStub("AceAddon-3.0"):GetAddon("ActionBar");
+local Module = Addon:NewModule("HideBlz");
 local BlzHider = CreateFrame("Frame");
 
 function Module:SetBlzHider()
@@ -65,7 +65,7 @@ function Module:HideTexture()
 	OverrideActionBar["_ButtonBGMid"]:SetAlpha(0);
 end
 
-function Module:OnEnable()
+function Module:OnInitialize()
 	Module:SetBlzHider();
 	Module:SetBlzFrameParent();
 	Module:HideTexture();

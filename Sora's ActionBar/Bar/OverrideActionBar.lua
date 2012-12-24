@@ -1,6 +1,6 @@
 -- Engine
-local Addon = Sora:GetAddon("ActionBar") and Sora:GetAddon("ActionBar") or Sora:CreateAddon("ActionBar");
-local Module = Addon:CreateModule("OverrideActionBar");
+local Addon = LibStub("AceAddon-3.0"):GetAddon("ActionBar");
+local Module = Addon:NewModule("OverrideActionBar");
 local F, M, C = nil, nil, nil;
 
 function Module:GetEngine()
@@ -52,7 +52,7 @@ function Module:DoRegisterStateDriver()
 	RegisterStateDriver(OverrideActionBar, "visibility", "[overridebar][vehicleui][possessbar,@vehicle,exists] show; hide");
 end
 
-function Module:OnLoad()
+function Module:OnInitialize()
 	Module:GetEngine();
 end
 

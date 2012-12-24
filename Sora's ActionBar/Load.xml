@@ -1,5 +1,8 @@
 ﻿<Ui xmlns="http://www.blizzard.com/wow/ui/">
 
+	<!-- Sora-Init -->
+	<Script file = "Sora-Init.lua" />
+
 	<!-- Config -->
 	<Include file = "Config\Load.xml" />
 	
